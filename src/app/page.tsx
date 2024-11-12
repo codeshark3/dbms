@@ -14,7 +14,7 @@ import {
   FormMessage,
   FormControl,
 } from "@/components/ui/form";
-import Header from "@/components/Header";
+
 import CustomFormField from "@/components/forms/CustomFormField";
 import { FormFieldType } from "@/components/forms/CustomFormField";
 import Image from "next/image";
@@ -34,7 +34,6 @@ export default function Home() {
   return (
     <div className="h-screen w-full">
       {" "}
-      <Header />
       <div className="flex h-[90vh] w-full flex-col items-center justify-center bg-white text-white">
         <div className="flex flex-col items-center">
           {/* Chat Interface */}

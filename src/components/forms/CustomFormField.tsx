@@ -199,6 +199,7 @@ import Image from "next/image";
 
 export enum FormFieldType {
   INPUT = "input",
+  PASSWORD = "password",
   TEXTAREA = "textarea",
   PHONE_INPUT = "phoneInput",
   CHECKBOX = "checkbox",
@@ -254,6 +255,28 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
         </div>
       );
       break;
+    case FormFieldType.PASSWORD:
+      return (
+        <div className="border-dark-500 bg-dark-400 mx-2 flex rounded-md border">
+          <FormControl className="">
+            <Input
+              placeholder={placeholder}
+              type="password"
+              {...field}
+              className="shad-input border-0"
+            />
+          </FormControl>{" "}
+          {iconSrc && (
+            <Image
+              src={iconSrc}
+              width={24}
+              height={24}
+              alt={iconAlt || "icon"}
+              className="ml-2"
+            />
+          )}
+        </div>
+      );
     case FormFieldType.TEXTAREA:
       return (
         <FormControl>

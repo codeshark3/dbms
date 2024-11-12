@@ -1,20 +1,39 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { buttonVariants } from "./ui/button";
 // import { CgProfile } from "react-icons/cg";
 const Header = () => {
   return (
-    <div className="grid grid-cols-2 gap-4 border-b bg-primary p-4">
-      <div className="flex flex-shrink-0 items-center pl-4">
-        <Image
-          src="/assets/images/logo.png"
-          alt="logo"
-          width={50}
-          height={50}
-        />
-        <h1 className="ml-2 text-2xl font-bold text-white">CSIR-WRI DBMS</h1>
+    <div className="border-b px-4">
+      <div className="flex items-center justify-between mx-auto h-16">
+        <div className="flex items-center gap-2">
+          <Image
+            src="/assets/images/logo.png"
+            alt="logo"
+            width={50}
+            height={50}
+          />
+          <h1 className=" font-bold text-primary">CSIR-WRI DBMS</h1>
+        </div>
+        <div>
+          <Link href={"signin"} className={buttonVariants()}>
+            Sign In
+          </Link>
+        </div>
       </div>
     </div>
+    //   <div className="grid grid-cols-2 gap-4 border-b bg-primary p-4">
+    //   <div className="flex flex-shrink-0 items-center pl-4">
+    //     <Image
+    //       src="/assets/images/logo.png"
+    //       alt="logo"
+    //       width={50}
+    //       height={50}
+    //     />
+    //     <h1 className="ml-2 text-2xl font-bold text-white">CSIR-WRI DBMS</h1>
+    //   </div>
+    // </div>
     // <div className="flex h-[100px] items-center justify-between border-4 bg-slate-200 py-3">
     //   <div className="flex flex-shrink-0 items-center pl-4">
     //     <Image
